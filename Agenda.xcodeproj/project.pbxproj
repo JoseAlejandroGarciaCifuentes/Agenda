@@ -3,29 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		53C3B13425BF3FE4007CBA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B13325BF3FE4007CBA91 /* AppDelegate.swift */; };
 		53C3B13625BF3FE4007CBA91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B13525BF3FE4007CBA91 /* SceneDelegate.swift */; };
-		53C3B13825BF3FE4007CBA91 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B13725BF3FE4007CBA91 /* SignUpController.swift */; };
+		53C3B13825BF3FE4007CBA91 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B13725BF3FE4007CBA91 /* SignUpViewController.swift */; };
 		53C3B13B25BF3FE4007CBA91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C3B13925BF3FE4007CBA91 /* Main.storyboard */; };
 		53C3B13D25BF3FE5007CBA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C3B13C25BF3FE5007CBA91 /* Assets.xcassets */; };
 		53C3B14025BF3FE5007CBA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C3B13E25BF3FE5007CBA91 /* LaunchScreen.storyboard */; };
-		53C3B14825BF5A94007CBA91 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B14725BF5A94007CBA91 /* LogInController.swift */; };
+		53C3B14825BF5A94007CBA91 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B14725BF5A94007CBA91 /* LogInViewController.swift */; };
+		9EABEA0AA25446F26BF7076D /* Pods_Agenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0935AD3DECD572A487776382 /* Pods-Agenda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agenda.debug.xcconfig"; path = "Target Support Files/Pods-Agenda/Pods-Agenda.debug.xcconfig"; sourceTree = "<group>"; };
+		173DD8DF727BFDC2522716A6 /* Pods-Agenda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agenda.release.xcconfig"; path = "Target Support Files/Pods-Agenda/Pods-Agenda.release.xcconfig"; sourceTree = "<group>"; };
 		53C3B13025BF3FE4007CBA91 /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C3B13325BF3FE4007CBA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C3B13525BF3FE4007CBA91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		53C3B13725BF3FE4007CBA91 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		53C3B13725BF3FE4007CBA91 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		53C3B13A25BF3FE4007CBA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53C3B13C25BF3FE5007CBA91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53C3B13F25BF3FE5007CBA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53C3B14125BF3FE5007CBA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53C3B14725BF5A94007CBA91 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		53C3B14725BF5A94007CBA91 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EABEA0AA25446F26BF7076D /* Pods_Agenda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03FA6BB16B3BC9502E9A0856 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		289E46D33A87FC0C66478A72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0935AD3DECD572A487776382 /* Pods-Agenda.debug.xcconfig */,
+				173DD8DF727BFDC2522716A6 /* Pods-Agenda.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		53C3B12725BF3FE4007CBA91 = {
 			isa = PBXGroup;
 			children = (
 				53C3B13225BF3FE4007CBA91 /* Agenda */,
 				53C3B13125BF3FE4007CBA91 /* Products */,
+				289E46D33A87FC0C66478A72 /* Pods */,
+				03FA6BB16B3BC9502E9A0856 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +82,72 @@
 		53C3B13225BF3FE4007CBA91 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
-				53C3B13325BF3FE4007CBA91 /* AppDelegate.swift */,
-				53C3B13525BF3FE4007CBA91 /* SceneDelegate.swift */,
-				53C3B13725BF3FE4007CBA91 /* SignUpController.swift */,
-				53C3B13925BF3FE4007CBA91 /* Main.storyboard */,
-				53C3B14725BF5A94007CBA91 /* LogInController.swift */,
-				53C3B13C25BF3FE5007CBA91 /* Assets.xcassets */,
-				53C3B13E25BF3FE5007CBA91 /* LaunchScreen.storyboard */,
+				53C3B14F25BF82FB007CBA91 /* Controllers */,
+				53C3B14E25BF82F6007CBA91 /* Views */,
+				53C3B14D25BF82ED007CBA91 /* Models */,
+				53C3B14C25BF82E7007CBA91 /* Helpers */,
+				53C3B14B25BF82DD007CBA91 /* Constants */,
+				53C3B14A25BF82D2007CBA91 /* SupportFiles */,
+				53C3B14925BF82C5007CBA91 /* Services */,
 				53C3B14125BF3FE5007CBA91 /* Info.plist */,
 			);
 			path = Agenda;
+			sourceTree = "<group>";
+		};
+		53C3B14925BF82C5007CBA91 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		53C3B14A25BF82D2007CBA91 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				53C3B13325BF3FE4007CBA91 /* AppDelegate.swift */,
+				53C3B13525BF3FE4007CBA91 /* SceneDelegate.swift */,
+				53C3B13925BF3FE4007CBA91 /* Main.storyboard */,
+				53C3B13C25BF3FE5007CBA91 /* Assets.xcassets */,
+				53C3B13E25BF3FE5007CBA91 /* LaunchScreen.storyboard */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		53C3B14B25BF82DD007CBA91 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		53C3B14C25BF82E7007CBA91 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		53C3B14D25BF82ED007CBA91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53C3B14E25BF82F6007CBA91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53C3B13725BF3FE4007CBA91 /* SignUpViewController.swift */,
+				53C3B14725BF5A94007CBA91 /* LogInViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53C3B14F25BF82FB007CBA91 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53C3B14425BF3FE5007CBA91 /* Build configuration list for PBXNativeTarget "Agenda" */;
 			buildPhases = (
+				E678C8A4172D78179A71D535 /* [CP] Check Pods Manifest.lock */,
 				53C3B12C25BF3FE4007CBA91 /* Sources */,
 				53C3B12D25BF3FE4007CBA91 /* Frameworks */,
 				53C3B12E25BF3FE4007CBA91 /* Resources */,
+				BD1416F9450A63AED793F836 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,13 +218,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BD1416F9450A63AED793F836 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Agenda/Pods-Agenda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Agenda/Pods-Agenda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Agenda/Pods-Agenda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E678C8A4172D78179A71D535 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Agenda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		53C3B12C25BF3FE4007CBA91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53C3B13825BF3FE4007CBA91 /* SignUpController.swift in Sources */,
-				53C3B14825BF5A94007CBA91 /* LogInController.swift in Sources */,
+				53C3B13825BF3FE4007CBA91 /* SignUpViewController.swift in Sources */,
+				53C3B14825BF5A94007CBA91 /* LogInViewController.swift in Sources */,
 				53C3B13425BF3FE4007CBA91 /* AppDelegate.swift in Sources */,
 				53C3B13625BF3FE4007CBA91 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +410,7 @@
 		};
 		53C3B14525BF3FE5007CBA91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0935AD3DECD572A487776382 /* Pods-Agenda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +429,7 @@
 		};
 		53C3B14625BF3FE5007CBA91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 173DD8DF727BFDC2522716A6 /* Pods-Agenda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
