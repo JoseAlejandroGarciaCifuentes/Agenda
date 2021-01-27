@@ -14,6 +14,9 @@
 		53C3B13D25BF3FE5007CBA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C3B13C25BF3FE5007CBA91 /* Assets.xcassets */; };
 		53C3B14025BF3FE5007CBA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C3B13E25BF3FE5007CBA91 /* LaunchScreen.storyboard */; };
 		53C3B14825BF5A94007CBA91 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B14725BF5A94007CBA91 /* LogInViewController.swift */; };
+		53C3B15125C0E4D8007CBA91 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B15025C0E4D8007CBA91 /* Requests.swift */; };
+		53C3B15325C0E506007CBA91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B15225C0E506007CBA91 /* User.swift */; };
+		53C3B15525C0E64E007CBA91 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B15425C0E64E007CBA91 /* Endpoints.swift */; };
 		9EABEA0AA25446F26BF7076D /* Pods_Agenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		53C3B13F25BF3FE5007CBA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53C3B14125BF3FE5007CBA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53C3B14725BF5A94007CBA91 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		53C3B15025C0E4D8007CBA91 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		53C3B15225C0E506007CBA91 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		53C3B15425C0E64E007CBA91 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,7 @@
 		53C3B14925BF82C5007CBA91 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				53C3B15025C0E4D8007CBA91 /* Requests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 		53C3B14B25BF82DD007CBA91 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				53C3B15425C0E64E007CBA91 /* Endpoints.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 		53C3B14D25BF82ED007CBA91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				53C3B15225C0E506007CBA91 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,7 +276,10 @@
 			files = (
 				53C3B13825BF3FE4007CBA91 /* SignUpViewController.swift in Sources */,
 				53C3B14825BF5A94007CBA91 /* LogInViewController.swift in Sources */,
+				53C3B15325C0E506007CBA91 /* User.swift in Sources */,
+				53C3B15525C0E64E007CBA91 /* Endpoints.swift in Sources */,
 				53C3B13425BF3FE4007CBA91 /* AppDelegate.swift in Sources */,
+				53C3B15125C0E4D8007CBA91 /* Requests.swift in Sources */,
 				53C3B13625BF3FE4007CBA91 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
