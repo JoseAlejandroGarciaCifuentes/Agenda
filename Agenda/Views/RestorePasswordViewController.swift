@@ -1,32 +1,22 @@
 //
-//  LogInController.swift
+//  RestorePasswordViewController.swift
 //  Agenda
 //
-//  Created by Alejandro García on 25/1/21.
+//  Created by alumnos on 27/01/2021.
 //  Copyright © 2021 Alejandro García. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class RestorePasswordViewController: UIViewController {
 
-    @IBOutlet weak var username: UITextField!
-    
-    @IBOutlet weak var password: UITextField!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func LogInButton(_ sender: UIButton) {
-     
-        
-        
-    }
-    
+
     /*
     // MARK: - Navigation
 

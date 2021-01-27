@@ -17,6 +17,12 @@
 		53C3B15125C0E4D8007CBA91 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B15025C0E4D8007CBA91 /* Requests.swift */; };
 		53C3B15325C0E506007CBA91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B15225C0E506007CBA91 /* User.swift */; };
 		53C3B15525C0E64E007CBA91 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B15425C0E64E007CBA91 /* Endpoints.swift */; };
+		7F1AB13425C197C300DBC19E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AB13325C197C300DBC19E /* Colors.swift */; };
+		7F1AB13625C1A5AD00DBC19E /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AB13525C1A5AD00DBC19E /* RestorePasswordViewController.swift */; };
+		7F2B3D1725C18989004D441C /* FieldValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1625C18989004D441C /* FieldValidations.swift */; };
+		7F2B3D1925C18A15004D441C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1825C18A15004D441C /* StringExtension.swift */; };
+		7F2B3D1B25C18A3C004D441C /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1A25C18A3C004D441C /* UITextFieldExtension.swift */; };
+		7F2B3D1D25C18AEA004D441C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1C25C18AEA004D441C /* LoginController.swift */; };
 		9EABEA0AA25446F26BF7076D /* Pods_Agenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +41,12 @@
 		53C3B15025C0E4D8007CBA91 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		53C3B15225C0E506007CBA91 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53C3B15425C0E64E007CBA91 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		7F1AB13325C197C300DBC19E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7F1AB13525C1A5AD00DBC19E /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
+		7F2B3D1625C18989004D441C /* FieldValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidations.swift; sourceTree = SOURCE_ROOT; };
+		7F2B3D1825C18A15004D441C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = SOURCE_ROOT; };
+		7F2B3D1A25C18A3C004D441C /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = SOURCE_ROOT; };
+		7F2B3D1C25C18AEA004D441C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = SOURCE_ROOT; };
 		B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				53C3B15425C0E64E007CBA91 /* Endpoints.swift */,
+				7F1AB13325C197C300DBC19E /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -131,6 +144,9 @@
 		53C3B14C25BF82E7007CBA91 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7F2B3D1625C18989004D441C /* FieldValidations.swift */,
+				7F2B3D1825C18A15004D441C /* StringExtension.swift */,
+				7F2B3D1A25C18A3C004D441C /* UITextFieldExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -148,6 +164,7 @@
 			children = (
 				53C3B13725BF3FE4007CBA91 /* SignUpViewController.swift */,
 				53C3B14725BF5A94007CBA91 /* LogInViewController.swift */,
+				7F1AB13525C1A5AD00DBC19E /* RestorePasswordViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +172,7 @@
 		53C3B14F25BF82FB007CBA91 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F2B3D1C25C18AEA004D441C /* LoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,10 +292,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2B3D1D25C18AEA004D441C /* LoginController.swift in Sources */,
+				7F1AB13625C1A5AD00DBC19E /* RestorePasswordViewController.swift in Sources */,
+				7F1AB13425C197C300DBC19E /* Colors.swift in Sources */,
 				53C3B13825BF3FE4007CBA91 /* SignUpViewController.swift in Sources */,
 				53C3B14825BF5A94007CBA91 /* LogInViewController.swift in Sources */,
 				53C3B15325C0E506007CBA91 /* User.swift in Sources */,
+				7F2B3D1725C18989004D441C /* FieldValidations.swift in Sources */,
 				53C3B15525C0E64E007CBA91 /* Endpoints.swift in Sources */,
+				7F2B3D1B25C18A3C004D441C /* UITextFieldExtension.swift in Sources */,
+				7F2B3D1925C18A15004D441C /* StringExtension.swift in Sources */,
 				53C3B13425BF3FE4007CBA91 /* AppDelegate.swift in Sources */,
 				53C3B15125C0E4D8007CBA91 /* Requests.swift in Sources */,
 				53C3B13625BF3FE4007CBA91 /* SceneDelegate.swift in Sources */,

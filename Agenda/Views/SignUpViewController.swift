@@ -10,19 +10,35 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var textFieldPassword: UITextField!
     
-    @IBOutlet weak var confirmedPassword: UITextField!
+    @IBOutlet weak var textFieldConfirmedPass: UITextField!
+    
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
+    @IBAction func OnFinishTypingEmail(_ sender: UITextField) {
+        emailErrorLabel.isHidden = true
+    }
     
-
+    @IBAction func SignUpButton(_ sender: UIButton) {
+        
+        if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel)
+        {
+            let email = textFieldEmail.text!
+            
+            // move safely ...
+        }
+    }
+    
 
 }
 
