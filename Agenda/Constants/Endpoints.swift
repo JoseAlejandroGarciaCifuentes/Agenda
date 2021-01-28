@@ -11,7 +11,7 @@ class Endpoints {
     //User´s Petitions
     let register:String = "/register"
     let login:String = "/login"
-    let restorePassword:String = "/generateNewPassword"
+    let restorePassword:String = "/restore/password"
     let updatePassword:String = "/updatePassword"
     let getProfileInfo:String = "/getProfileInfo"
     let updateProfile:String = "/updateProfile"
