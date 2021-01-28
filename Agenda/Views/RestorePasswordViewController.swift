@@ -15,14 +15,13 @@ class RestorePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
     }
     
     
     @IBAction func ConfirmRestoring(_ sender: UIButton) {
         let parameters = [
-            "email":textFieldEmail.text!]
-        print(parameters)
+            "email":textFieldEmail.text!
+        ]
         Requests.shared.restorePassword(parameters: parameters)
     }
     

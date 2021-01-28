@@ -32,10 +32,11 @@ class SignUpViewController: UIViewController {
         
         if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel)
         {
-            let email = textFieldEmail.text!
-            //let password = textFieldPassword.text!
             
-            let user = User(username: "massatodonte", email: email, name: "arroba", surname: "gmail", profilePic: "")
+            let email = textFieldEmail.text!
+            let password = textFieldPassword.text!
+            
+            let user = User(username: "massatodonte", email: email, name: "arroba", surname: "gmail", profilePic: "", password: password)
             Requests.shared.postUsers(user: user)
             
         }

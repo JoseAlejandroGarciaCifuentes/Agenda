@@ -18,37 +18,40 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func LogInButton(_ sender: UIButton) {
      
-        let request = Requests.shared.getUsers()
-        /*request.responseJSON { (data) in
-          print(data)
-        }*/
-        request.response { (responseData) in
-        guard let data = responseData.data else {return}
-        
-        do{
-            let users = try JSONDecoder().decode(User.self, from: data)
-            print("users == \(users)")
-            
-        }catch{
-            print("Error decoding == \(error)")
-        }
-        
+        let parameters = [
+            "username":username.text!,
+            "password":password.text!
+        ]
+         let request = Requests.shared.login(parameters: parameters)
+        request.responseJSON { (response) in
+            print(response.value!)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+/** GET USERS
+ let request = Requests.shared.getUsers()
+ 
+ request.response { (responseData) in
+ guard let data = responseData.data else {return}
+ 
+ do{
+     let users = try JSONDecoder().decode([User].self, from: data)
+     
+     for user in users{
+         print(user.email)
+     }
+     
+     
+ }catch{
+     print("Error decoding == \(error)")
+ }
+ 
+ }
+ */

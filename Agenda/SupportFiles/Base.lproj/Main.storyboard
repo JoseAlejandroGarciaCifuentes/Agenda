@@ -138,6 +138,21 @@
             </objects>
             <point key="canvasLocation" x="229" y="-60"/>
         </scene>
+        <!--Main Screen View Controller-->
+        <scene sceneID="Zmo-SX-IlC">
+            <objects>
+                <viewController id="mJU-0a-UaG" customClass="MainScreenViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YwL-bW-mjG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="lrb-fN-p6Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppU-G9-whT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="194"/>
+        </scene>
         <!--Restore Password View Controller-->
         <scene sceneID="nrm-7m-GPP">
             <objects>

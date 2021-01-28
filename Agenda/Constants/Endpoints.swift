@@ -6,7 +6,7 @@ class Endpoints {
     
     static let shared = Endpoints()
     
-    let baseUrl = "http://192.168.1.40/Laravel/api-cryptonite/public/api/users"
+    let baseUrl = "http://localhost:8888/Alejandro/api-cryptonite/public/api/users"
     
     //User´s Petitions
     let register:String = "/register"
