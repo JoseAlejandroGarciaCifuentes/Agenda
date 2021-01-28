@@ -23,8 +23,22 @@ class LogInViewController: UIViewController {
     
     @IBAction func LogInButton(_ sender: UIButton) {
      
+        let request = Requests.shared.getUsers()
+        /*request.responseJSON { (data) in
+          print(data)
+        }*/
+        request.response { (responseData) in
+        guard let data = responseData.data else {return}
         
+        do{
+            let users = try JSONDecoder().decode(User.self, from: data)
+            print("users == \(users)")
+            
+        }catch{
+            print("Error decoding == \(error)")
+        }
         
+        }
     }
     
     /*

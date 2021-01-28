@@ -4,20 +4,18 @@ class Endpoints {
     
     private init() {}
     
-    let shared = Endpoints()
+    static let shared = Endpoints()
     
-    static let baseUrl = "http://192.168.1.40/Laravel/api-cryptonite/public/api/users"
+    let baseUrl = "http://192.168.1.40/Laravel/api-cryptonite/public/api/users"
     
     //User´s Petitions
-    enum User {
-        static let register:String = "/register"
-        static let login:String = "/login"
-        static let restorePassword:String = "/generateNewPassword"
-        static let updatePassword:String = "/updatePassword"
-        static let getProfileInfo:String = "/getProfileInfo"
-        static let updateProfile:String = "/updateProfile"
-        static let all:String = "/all"
-    }
+    let register:String = "/register"
+    let login:String = "/login"
+    let restorePassword:String = "/generateNewPassword"
+    let updatePassword:String = "/updatePassword"
+    let getProfileInfo:String = "/getProfileInfo"
+    let updateProfile:String = "/updateProfile"
+    let all:String = "/all"
 }
 
     

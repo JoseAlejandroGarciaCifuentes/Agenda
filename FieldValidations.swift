@@ -17,10 +17,10 @@ enum ValidationError: Error, LocalizedError
     {
         switch self
         {
-        case .invalidEmail:
-            return "Please enter a valid email"
-        case .invalidUserName:
-            return "Please enter a valid username"
+            case .invalidEmail:
+                return "Please enter a valid email"
+            case .invalidUserName:
+                return "Please enter a valid username"
         }
     }
 }

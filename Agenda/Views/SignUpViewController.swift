@@ -19,7 +19,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailErrorLabel: UILabel!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,11 +33,13 @@ class SignUpViewController: UIViewController {
         if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel)
         {
             let email = textFieldEmail.text!
+            //let password = textFieldPassword.text!
             
-            // move safely ...
+            let user = User(username: "massatodonte", email: email, name: "arroba", surname: "gmail", profilePic: "")
+            Requests.shared.postUsers(user: user)
+            
         }
     }
     
-
 }
 

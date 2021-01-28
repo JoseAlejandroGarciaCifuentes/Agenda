@@ -1,37 +1,41 @@
 import Foundation
 import Alamofire
 
-class Service {
+class Requests {
     
-    static let shared = Service()
+    static let shared = Requests()
     
     private init() {}
     
-    func getUsers() {
+    func getUsers()-> DataRequest {
         
-        AF.request(Endpoints.baseUrl+Endpoints.User.all, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor:nil).response { (responseData) in
+        /*AF.request(Endpoints.shared.baseUrl+Endpoints.shared.all, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor:nil).response { (responseData) in
             guard let data = responseData.data else {return}
             
             do{
                 let users = try JSONDecoder().decode([User].self, from: data)
                 print("users == \(users)")
                 
-                for user in users{
-                    print(user.email)
-                }
-                
             }catch{
                 print("Error decoding == \(error)")
             }
-        }
+        }*/
+        
+        /*let request = AF.request(Endpoints.shared.baseUrl+Endpoints.shared.all)
+        // 2
+        request.responseJSON { (data) in
+          print(data)
+        }*/
+        
+        return AF.request(Endpoints.shared.baseUrl+Endpoints.shared.all, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor:nil)
+        
+        
         
     }
     
-    func postUsers() {
-        
-        let user = User(username: "mastodonte", email: "arrobagmail", name: "arroba", surname: "gmail", profilePic: "", password: "12314we")
+    func postUsers(user:User) {
 
-        AF.request(Endpoints.baseUrl+Endpoints.User.register, method: .post, parameters: user, encoder: JSONParameterEncoder.default).response { response in
+        AF.request(Endpoints.shared.baseUrl+Endpoints.shared.register, method: .post, parameters: user, encoder: JSONParameterEncoder.default).response { response in
             debugPrint(response)
         
         }
