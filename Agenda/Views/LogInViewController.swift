@@ -27,12 +27,12 @@ class LogInViewController: UIViewController {
             "password":password.text!
         ]
          let request = Requests.shared.login(parameters: parameters)
-        request.responseJSON { (response) in
-            print(response.value!)
+        //request.responseJSON { (response) in
+            //print(response.value!)
         }
     }
 
-}
+
 
 
 /** GET USERS

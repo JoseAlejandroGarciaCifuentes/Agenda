@@ -13,7 +13,7 @@ class Requests {
         
     }
     
-    func postUsers(user:User) {
+    func registerUser(user:User) {
 
         AF.request(Endpoints.shared.baseUrl+Endpoints.shared.register, method: .post, parameters: user, encoder: JSONParameterEncoder.default).response { response in
             debugPrint(response)

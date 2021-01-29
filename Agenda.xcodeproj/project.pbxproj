@@ -24,6 +24,7 @@
 		7F2B3D1B25C18A3C004D441C /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1A25C18A3C004D441C /* UITextFieldExtension.swift */; };
 		7F2B3D1D25C18AEA004D441C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1C25C18AEA004D441C /* LoginController.swift */; };
 		7F69E5E225C2EEC500180795 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F69E5E125C2EEC500180795 /* MainScreenViewController.swift */; };
+		7F81F8DB25C42735002D07B8 /* SignUpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F81F8DA25C42735002D07B8 /* SignUpDetailsViewController.swift */; };
 		9EABEA0AA25446F26BF7076D /* Pods_Agenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		7F2B3D1A25C18A3C004D441C /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = SOURCE_ROOT; };
 		7F2B3D1C25C18AEA004D441C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = SOURCE_ROOT; };
 		7F69E5E125C2EEC500180795 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		7F81F8DA25C42735002D07B8 /* SignUpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailsViewController.swift; sourceTree = "<group>"; };
 		B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				53C3B14725BF5A94007CBA91 /* LogInViewController.swift */,
 				7F1AB13525C1A5AD00DBC19E /* RestorePasswordViewController.swift */,
 				7F69E5E125C2EEC500180795 /* MainScreenViewController.swift */,
+				7F81F8DA25C42735002D07B8 /* SignUpDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				7F69E5E225C2EEC500180795 /* MainScreenViewController.swift in Sources */,
 				7F2B3D1925C18A15004D441C /* StringExtension.swift in Sources */,
 				53C3B13425BF3FE4007CBA91 /* AppDelegate.swift in Sources */,
+				7F81F8DB25C42735002D07B8 /* SignUpDetailsViewController.swift in Sources */,
 				53C3B15125C0E4D8007CBA91 /* Requests.swift in Sources */,
 				53C3B13625BF3FE4007CBA91 /* SceneDelegate.swift in Sources */,
 			);
