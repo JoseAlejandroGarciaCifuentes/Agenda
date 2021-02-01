@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Agenda
-//
-//  Created by Alejandro García on 25/1/21.
-//  Copyright © 2021 Alejandro García. All rights reserved.
-//
-
 import UIKit
 
 class SignUpViewController: UIViewController {
@@ -36,6 +28,7 @@ class SignUpViewController: UIViewController {
             //let password = textFieldPassword.text!
             
             let user = User(username: "massatodonte", email: email, name: "arroba", surname: "gmail", profilePic: "")
+            
             Requests.shared.postUsers(user: user)
             
         }

@@ -28,13 +28,6 @@ class User : Encodable, Decodable{
         self._profilePic = profilePic
     }
     
-    /**
-     Devuelve info del usuario orientada a ser mostrada en el perfil
-     */
-    /*public func getProfileInfo()->[String:Any]{
-        return ["username":_username,"email":_email,"name":_name,"surname":_surname,"dateOfBirth":_dateOfBirth]
-    }*/
-    
     public var name: String {
         get {
             return self._name;

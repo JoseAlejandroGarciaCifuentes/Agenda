@@ -9,25 +9,7 @@ class Requests {
     
     func getUsers() -> DataRequest {
         
-        /*AF.request(Endpoints.shared.baseUrl+Endpoints.shared.all, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor:nil).response { (responseData) in
-            guard let data = responseData.data else {return}
-            
-            do{
-                let users = try JSONDecoder().decode([User].self, from: data)
-                print("users == \(users)")
-                
-            }catch{
-                print("Error decoding == \(error)")
-            }
-        }*/
-        
-        /*let request = AF.request(Endpoints.shared.baseUrl+Endpoints.shared.all)
-        // 2
-        request.responseJSON { (data) in
-          print(data)
-        }*/
-        
-        return AF.request(Endpoints.shared.baseUrl+Endpoints.shared.all, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor:nil)
+        return AF.request(Endpoints.shared.myComputer + Endpoints.shared.baseUrl+Endpoints.shared.all, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor:nil)
         
     }
     

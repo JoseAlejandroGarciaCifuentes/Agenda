@@ -1,10 +1,3 @@
-//
-//  RestorePasswordViewController.swift
-//  Agenda
-//
-//  Created by alumnos on 27/01/2021.
-//  Copyright © 2021 Alejandro García. All rights reserved.
-//
 
 import UIKit
 
@@ -15,9 +8,7 @@ class RestorePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
     }
-    
     
     @IBAction func ConfirmRestoring(_ sender: UIButton) {
         let parameters = [
@@ -25,11 +16,4 @@ class RestorePasswordViewController: UIViewController {
         print(parameters)
         Requests.shared.restorePassword(parameters: parameters)
     }
-    
-        
-        
-    
-    
-    
-
 }
