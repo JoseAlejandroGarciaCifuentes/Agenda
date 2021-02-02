@@ -18,6 +18,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
             do{
                 self.users = try JSONDecoder().decode([User].self, from: data)
+                //debugPrint(responseData)
                 self.tableView.reloadData()
             }catch{
                 print("Error decoding == \(error)")
@@ -35,6 +36,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as! UserRow
         cell.nameLabel.text = users[indexPath.row].name
+        cell.surnameLabel.text = users[indexPath.row].surname
         //cell.profilePicIV.image = users[indexPath.row].profilePic
         return cell
     }

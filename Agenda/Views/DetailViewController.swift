@@ -12,11 +12,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(user!.email)
+        //print(user!.email)
         
         usernameLabel.text = user?.username
         fullNameLabel.text = user!.name + " " + user!.surname
+        emailLabel.text = user?.email
     }
-    
 
 }
