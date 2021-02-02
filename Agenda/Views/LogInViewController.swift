@@ -1,18 +1,11 @@
-//
-//  LogInController.swift
-//  Agenda
-//
-//  Created by Alejandro García on 25/1/21.
-//  Copyright © 2021 Alejandro García. All rights reserved.
-//
 
 import UIKit
 
 class LogInViewController: UIViewController {
 
-    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var usernameTF: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
     
     
     override func viewDidLoad() {
@@ -22,15 +15,19 @@ class LogInViewController: UIViewController {
     
     @IBAction func LogInButton(_ sender: UIButton) {
         
-        let parameters = [
-            "username":username.text!,
-            "password":password.text!
-        ]
-         let request = Requests.shared.login(parameters: parameters)
-        //request.responseJSON { (response) in
-            //print(response.value!)
+        let parameters =
+            ["username":usernameTF.text!,
+             "password":passwordTF.text!]
+        
+        let request = Requests.shared.login(parameters: parameters)
+        
+        request.responseJSON { response in
+            
+            debugPrint(response.value!)
         }
     }
+
+}
 
 
 
@@ -55,3 +52,7 @@ class LogInViewController: UIViewController {
  
  }
  */
+     
+        
+
+
