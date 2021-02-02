@@ -13,12 +13,12 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let request = Requests.shared.getUsers()
         
         request.response { (responseData) in
+        
         guard let data = responseData.data else {return}
         
             do{
-                
                 self.users = try JSONDecoder().decode([User].self, from: data)
-                
+                self.tableView.reloadData()
             }catch{
                 print("Error decoding == \(error)")
             }
