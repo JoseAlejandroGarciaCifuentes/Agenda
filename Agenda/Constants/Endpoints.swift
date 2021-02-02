@@ -7,7 +7,7 @@ class Endpoints {
     static let shared = Endpoints()
     
     let myComputer = "http://192.168.1.40"
-    let localMac = "http://localhost:8889"
+    let localMac = "http://localhost:8888"
     let localWin = "http://localhost"
     let cevMac = "http://localhost:8888"
     

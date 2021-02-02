@@ -22,6 +22,7 @@ class RestorePasswordViewController: UIViewController {
         let parameters = [
             "email":textFieldEmail.text!
         ]
+        
         Requests.shared.restorePassword(parameters: parameters)
     }
     

@@ -15,21 +15,26 @@ class LogInViewController: UIViewController {
     
     @IBAction func LogInButton(_ sender: UIButton) {
         
-        let parameters =
-            ["username":usernameTF.text!,
-             "password":passwordTF.text!]
-        
-        let request = Requests.shared.login(parameters: parameters)
-        
-        request.responseJSON { response in
+        if(!usernameTF.text!.isEmpty && !passwordTF.text!.isEmpty){
             
-            debugPrint(response.value!)
+            let parameters =
+                ["username":usernameTF.text!,
+                 "password":passwordTF.text!]
+            
+            let request = Requests.shared.login(parameters: parameters)
+            
+            request.responseJSON { response in
+                
+                if(response.response!.statusCode == 200){
+                    //self.navigationController?.setNavigationBarHidden(true, animated: true)
+                    self.performSegue(withIdentifier: "cellID", sender: sender)
+                }
+            }
+            
         }
     }
 
 }
-
-
 
 
 /** GET USERS

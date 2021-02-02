@@ -24,31 +24,23 @@ class SignUpViewController: UIViewController {
         
         if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel)
         {
-            
-            let user = User(username: "mahtodonte", email: textFieldEmail.text!, name: "arroba2", surname: "gmail", profilePic: "", password: textFieldPassword.text!)
-            
-            Requests.shared.registerUser(user: user)
-            
-            /*self.performSegue(withIdentifier: "signup", sender: sender)
-            print("que paso")*/
+            if(!textFieldPassword.text!.isEmpty){
+                if(textFieldPassword.text! == textFieldConfirmedPass.text!){
+                    self.performSegue(withIdentifier: "signup", sender: sender)
+                }
+            }
         }
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if(segue.identifier == "signup"){
             let controller = segue.destination as! SignUpDetailsViewController
             controller.email = textFieldEmail.text!
             controller.password = textFieldPassword.text!
-            let email = textFieldEmail.text!
-            let password = textFieldPassword.text!
             
-            let user = User(username: "mahtodonte", email: email, name: "arroba2", surname: "gmail", profilePic: "", password: password)
-            
-            Requests.shared.registerUser(user: user)
-
         }
         
-    }*/
+    }
     
 }
 
