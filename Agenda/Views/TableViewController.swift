@@ -47,7 +47,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // Enviar la información del elemento a la pantalla de detalle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let destination = segue.destination as! DetailViewController
-        //destination.user = sender as? User
+        let destination = segue.destination as! DetailViewController
+        destination.user = sender as? User
     }
 }
