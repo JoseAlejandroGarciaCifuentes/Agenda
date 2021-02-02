@@ -15,15 +15,15 @@ class LogInViewController: UIViewController {
     
     @IBAction func LogInButton(_ sender: UIButton) {
      
-        let parameters:[String:String] =
-            ["email":usernameTF.text!,
+        let parameters =
+            ["username":usernameTF.text!,
              "password":passwordTF.text!]
         
         let request = Requests.shared.login(parameters: parameters)
         
         request.responseJSON { response in
             
-            //debugPrint(response)
+            debugPrint(response.value!)
         }
     }
 

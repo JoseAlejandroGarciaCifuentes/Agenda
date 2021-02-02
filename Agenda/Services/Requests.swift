@@ -15,7 +15,7 @@ class Requests {
     
     func postUsers(user:User) {
 
-        AF.request(Endpoints.shared.baseUrl+Endpoints.shared.register, method: .post, parameters: user, encoder: JSONParameterEncoder.default).response { response in
+        AF.request(Endpoints.shared.cevMac + Endpoints.shared.cevUrl+Endpoints.shared.register, method: .post, parameters: user, encoder: JSONParameterEncoder.default).response { response in
             debugPrint(response)
         
         }
