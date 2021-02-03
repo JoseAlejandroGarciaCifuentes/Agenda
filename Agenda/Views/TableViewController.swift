@@ -36,7 +36,19 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as! UserRow
         cell.nameLabel.text = users[indexPath.row].name
         cell.surnameLabel.text = users[indexPath.row].surname
-        //cell.profilePicIV.image = users[indexPath.row].profilePic
+        let request = Requests.shared.getImage(url: users[indexPath.row].profilePic)
+        
+        request.response{ response in
+
+            switch response.result {
+                 case .success(let responseData):
+                     cell.profilePicIV.image = UIImage(data: responseData!, scale:1)
+
+                 case .failure(let error):
+                     print("error--->",error)
+            }
+        }
+         
         return cell
     }
     

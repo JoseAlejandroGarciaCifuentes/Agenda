@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5360F7CB25CB395300AB7EC3 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360F7CA25CB395300AB7EC3 /* Images.swift */; };
 		53858A4E25C94AFE002E323B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53858A4D25C94AFE002E323B /* DetailViewController.swift */; };
 		53858A5025CA0DCC002E323B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53858A4F25CA0DCC002E323B /* ProfileViewController.swift */; };
 		53C3B13425BF3FE4007CBA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B13325BF3FE4007CBA91 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		0935AD3DECD572A487776382 /* Pods-Agenda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agenda.debug.xcconfig"; path = "Target Support Files/Pods-Agenda/Pods-Agenda.debug.xcconfig"; sourceTree = "<group>"; };
 		173DD8DF727BFDC2522716A6 /* Pods-Agenda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agenda.release.xcconfig"; path = "Target Support Files/Pods-Agenda/Pods-Agenda.release.xcconfig"; sourceTree = "<group>"; };
+		5360F7CA25CB395300AB7EC3 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		53858A4D25C94AFE002E323B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		53858A4F25CA0DCC002E323B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		53C3B13025BF3FE4007CBA91 /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 			children = (
 				53C3B15425C0E64E007CBA91 /* Endpoints.swift */,
 				7F1AB13325C197C300DBC19E /* Colors.swift */,
+				5360F7CA25CB395300AB7EC3 /* Images.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				7F2B3D1925C18A15004D441C /* StringExtension.swift in Sources */,
 				53C3B13425BF3FE4007CBA91 /* AppDelegate.swift in Sources */,
 				7F81F8DB25C42735002D07B8 /* SignUpDetailsViewController.swift in Sources */,
+				5360F7CB25CB395300AB7EC3 /* Images.swift in Sources */,
 				53C3B15125C0E4D8007CBA91 /* Requests.swift in Sources */,
 				53C3B13625BF3FE4007CBA91 /* SceneDelegate.swift in Sources */,
 			);

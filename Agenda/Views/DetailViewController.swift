@@ -9,6 +9,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
     
+    @IBOutlet weak var profilePicIV: UIImageView!
     var user: User?
     
     override func viewDidLoad() {
@@ -17,6 +18,18 @@ class DetailViewController: UIViewController {
         usernameLabel.text = user?.username
         fullNameLabel.text = user!.name + " " + user!.surname
         emailLabel.text = user?.email
-    }
+        let request = Requests.shared.getImage(url: user!.profilePic)
+        
+        request.response{ response in
 
+            switch response.result {
+                 case .success(let responseData):
+                     self.profilePicIV.image = UIImage(data: responseData!, scale:1)
+
+                 case .failure(let error):
+                     print("error--->",error)
+            }
+        }
+
+    }
 }

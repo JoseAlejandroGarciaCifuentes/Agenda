@@ -27,15 +27,20 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBAction func updatePassBT(_ sender: UIButton) {
+        
+        
+    }
     @IBAction func deleteBT(_ sender: UIButton) {
-        if let api_token = UserDefaults.standard.value(forKey: "api_token")
+        if let api_token:String = UserDefaults.standard.string(forKey: "api_token")
         {
-            print(api_token)
+            print(api_token.description)
             
-            let parameters: [String:String] = [
+            /*let parameters : [String:String] = [
                 "api_token": api_token as! String
-            ]
-            let request = Requests.shared.deleteUser(parameters: parameters)
+            ]*/
+            
+            let request = Requests.shared.deleteUser(api_key: api_token)
             request.responseJSON { (response) in
                 
                 debugPrint(response)
