@@ -22,14 +22,22 @@ class SignUpDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func confirmSignUpBT(_ sender: UIButton) {
         
         let user = User(username: usernameTF.text!, email: email!, name: nameTF.text!, surname: surnameTF.text!, profilePic: "", password: password!)
     
-        Requests.shared.registerUser(user: user)
+        let request = Requests.shared.registerUser(user: user)
+        
+        request.responseJSON { (response) in
+            print(response.value!)
+            if(response.value! as! String == "Usuario registrado"){
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
+        
     }
 
 }

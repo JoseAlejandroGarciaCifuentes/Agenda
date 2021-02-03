@@ -6,11 +6,12 @@ class Endpoints {
     
     static let shared = Endpoints()
     
+    //DOMAIN
     let myComputer = "http://192.168.1.40"
     let localMac = "http://localhost:8888"
     let localWin = "http://localhost"
-    let cevMac = "http://localhost:8888"
     
+    //API DATA LOCATION
     let baseUrl = "/Laravel/api-cryptonite/public/api/users"
     let cevUrl = "/Alejandro/api-cryptonite/public/api/users"
 
@@ -23,6 +24,7 @@ class Endpoints {
     let getProfileInfo:String = "/getProfileInfo"
     let updateProfile:String = "/updateProfile"
     let all:String = "/all"
+    let delete:String = "/delete"
 }
 
     

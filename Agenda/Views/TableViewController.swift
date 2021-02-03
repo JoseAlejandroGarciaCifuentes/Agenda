@@ -18,7 +18,6 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
             do{
                 self.users = try JSONDecoder().decode([User].self, from: data)
-                //debugPrint(responseData)
                 self.tableView.reloadData()
             }catch{
                 print("Error decoding == \(error)")

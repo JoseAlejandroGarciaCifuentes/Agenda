@@ -10,7 +10,7 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func LogInButton(_ sender: UIButton) {
@@ -24,10 +24,11 @@ class LogInViewController: UIViewController {
             let request = Requests.shared.login(parameters: parameters)
             
             request.responseJSON { response in
-                
+                print(response.value! as! String)
                 if(response.response!.statusCode == 200){
                     //self.navigationController?.setNavigationBarHidden(true, animated: true)
                     self.performSegue(withIdentifier: "cellID", sender: sender)
+                    UserDefaults.standard.set(response.value! as! String, forKey: "api_token" )
                 }
             }
             
