@@ -26,8 +26,8 @@ class SignUpDetailsViewController: UIViewController {
     }
     
     @IBAction func confirmSignUpBT(_ sender: UIButton) {
-        
-        let user = User(username: usernameTF.text!, email: email!, name: nameTF.text!, surname: surnameTF.text!, profilePic: Images.shared.pictures[Int.random(in: 0..<Images.shared.pictures.count)], password: password!)
+        let images = Images.shared
+        let user = User(username: usernameTF.text!, email: email!, name: nameTF.text!, surname: surnameTF.text!, profilePic: images.pictures[Int.random(in: 0..<images.pictures.count)], password: password!)
     
         let request = Requests.shared.registerUser(user: user)
         

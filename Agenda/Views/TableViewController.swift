@@ -5,6 +5,11 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     var users:[User] = []
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         self.navigationController?.setNavigationBarHidden(true, animated: true)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self

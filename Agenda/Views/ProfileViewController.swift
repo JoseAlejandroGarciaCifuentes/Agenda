@@ -18,9 +18,16 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var usernameLabel: UILabel!
     
-    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var passwordField: UITextField!
+    
     
     var user: User?
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         self.navigationController?.setNavigationBarHidden(true, animated: true)
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,25 +59,32 @@ class ProfileViewController: UIViewController {
     
     @IBAction func updatePassBT(_ sender: UIButton) {
         
+        if(!passwordField.text!.isEmpty){
+            
+            if let api_token:String = UserDefaults.standard.string(forKey: "api_token")
+            {
+                let request = Requests.shared.updatePassword(password: passwordField.text!, api_token: api_token)
+                
+                request.responseJSON { (response) in
+                    print(response.value!)
+                }
+                
+            }
+            
+        }
+        
+        
         
     }
     @IBAction func deleteBT(_ sender: UIButton) {
         if let api_token:String = UserDefaults.standard.string(forKey: "api_token")
         {
-            print(api_token.description)
-            
-            /*let parameters : [String:String] = [
-                "api_token": api_token as! String
-            ]*/
-            
-            let request = Requests.shared.deleteUser(api_key: api_token)
+            let request = Requests.shared.deleteUser(api_token: api_token)
             request.responseJSON { (response) in
                 
-                debugPrint(response)
-                
-                /*if(response.value! as! String == "Deleted"){
+                if(response.value! as! String == "Deleted"){
                     self.navigationController?.popToRootViewController(animated: true)
-                }*/
+                }
             }
         }else{
             self.navigationController?.popToRootViewController(animated: true)

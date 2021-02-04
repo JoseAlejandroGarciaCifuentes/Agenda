@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faG-tS-YNG">
-                                <rect key="frame" x="0.0" y="88" width="414" height="161"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="249"/>
                                 <color key="backgroundColor" red="0.93710225820000004" green="0.92571443320000002" blue="0.90980219839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="7AB-hr-nG6">
@@ -104,7 +104,7 @@
                                 <rect key="frame" x="200" y="603" width="193" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-uc-8FS">
                                 <rect key="frame" x="133" y="677" width="149" height="48"/>
@@ -124,7 +124,7 @@
                             <constraint firstItem="faG-tS-YNG" firstAttribute="leading" secondItem="mFx-K2-Qsx" secondAttribute="leading" id="Ail-dl-J3V"/>
                             <constraint firstItem="mFx-K2-Qsx" firstAttribute="trailing" secondItem="xez-IV-mrh" secondAttribute="trailing" constant="146" id="Jpg-ao-aYY"/>
                             <constraint firstItem="xez-IV-mrh" firstAttribute="top" secondItem="7AB-hr-nG6" secondAttribute="bottom" constant="420" id="KXk-FP-E8E"/>
-                            <constraint firstItem="faG-tS-YNG" firstAttribute="top" secondItem="mFx-K2-Qsx" secondAttribute="top" id="O7a-ut-az4"/>
+                            <constraint firstItem="faG-tS-YNG" firstAttribute="top" secondItem="LBZ-dw-c1C" secondAttribute="top" id="O7a-ut-az4"/>
                             <constraint firstItem="7AB-hr-nG6" firstAttribute="centerY" secondItem="LBZ-dw-c1C" secondAttribute="centerY" constant="-200" id="WVL-m2-D0A"/>
                             <constraint firstItem="7AB-hr-nG6" firstAttribute="centerX" secondItem="LBZ-dw-c1C" secondAttribute="centerX" id="bGK-4X-eRB"/>
                             <constraint firstItem="mFx-K2-Qsx" firstAttribute="bottom" secondItem="xez-IV-mrh" secondAttribute="bottom" constant="36" id="cCF-2j-GDu"/>
@@ -140,6 +140,7 @@
                     <connections>
                         <outlet property="emailLabel" destination="MMh-3t-2ce" id="NnP-5X-bc5"/>
                         <outlet property="nameLabel" destination="TFN-4d-M48" id="jeN-su-GUC"/>
+                        <outlet property="passwordField" destination="g0g-r6-cUZ" id="Fs9-by-jVK"/>
                         <outlet property="surnameLabel" destination="6m6-eC-CXe" id="u99-tf-seF"/>
                         <outlet property="usernameLabel" destination="RTc-4x-bCm" id="6OV-Bl-3JU"/>
                     </connections>
@@ -263,6 +264,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" red="0.61945468189999997" green="0.60806977750000002" blue="0.59215497969999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goToLogInBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0P-ew-CFj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -701,7 +705,7 @@
                                         <rect key="frame" x="0.0" y="136" width="306" height="34"/>
                                         <color key="backgroundColor" red="0.62335467339999995" green="0.61204713580000003" blue="0.5921544433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>

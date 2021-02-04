@@ -16,6 +16,11 @@ class SignUpViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         self.navigationController?.setNavigationBarHidden(false, animated: true)
+
+    }
     
     @IBAction func OnFinishTypingEmail(_ sender: UITextField) {
         emailErrorLabel.isHidden = true
@@ -32,6 +37,12 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func goToLogInBT(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if(segue.identifier == "signup"){

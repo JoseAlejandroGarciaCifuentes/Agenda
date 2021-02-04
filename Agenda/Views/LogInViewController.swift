@@ -11,6 +11,13 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         self.navigationController?.setNavigationBarHidden(true, animated: true)
+
     }
     
     @IBAction func LogInButton(_ sender: UIButton) {
@@ -24,26 +31,30 @@ class LogInViewController: UIViewController {
             let request = Requests.shared.login(parameters: parameters)
             
             request.responseJSON { response in
-                print(response.value! as! String)
-                if(response.response!.statusCode == 200){
-                    //self.navigationController?.setNavigationBarHidden(true, animated: true)
-                    self.performSegue(withIdentifier: "cellID", sender: sender)
-                    UserDefaults.standard.set(response.value! as! String, forKey: "api_token" )
+                
+                if(response.value! as! String != "500"){
+                    let body = response.value! as! String
+                    let bodies = body.split(separator: " ")
+                
+                    if(response.response!.statusCode == 200 && bodies[0] == "OK"){
+                        self.performSegue(withIdentifier: "cellID", sender: sender)
+                        UserDefaults.standard.set(bodies[1], forKey: "api_token" )
+                        print(UserDefaults.standard.string(forKey: "api_token")!)
+                    }
                 }
             }
             
         }else{
             
-            let request = Requests.shared.updatePassword(password: "1234")
-            
-            request.responseJSON { (response) in
-                debugPrint(response)
-            
-            }
         }
 
     }
-
+    
+    
+    @IBAction func goToSignUpBT(_ sender: UIButton) {
+        
+    }
+    
 }
 /** GET USERS
  let request = Requests.shared.getUsers()

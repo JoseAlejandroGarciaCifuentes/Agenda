@@ -12,6 +12,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var profilePicIV: UIImageView!
     var user: User?
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         self.navigationController?.setNavigationBarHidden(false, animated: true)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

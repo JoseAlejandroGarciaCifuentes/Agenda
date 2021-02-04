@@ -17,6 +17,12 @@ class RestorePasswordViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+         self.navigationController?.setNavigationBarHidden(false, animated: true)
+
+    }
+    
     
     @IBAction func ConfirmRestoring(_ sender: UIButton) {
         let parameters = [
