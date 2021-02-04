@@ -32,12 +32,19 @@ class LogInViewController: UIViewController {
                 }
             }
             
+        }else{
+            
+            let request = Requests.shared.updatePassword(password: "1234")
+            
+            request.responseJSON { (response) in
+                debugPrint(response)
+            
+            }
         }
+
     }
 
 }
-
-
 /** GET USERS
  let request = Requests.shared.getUsers()
  

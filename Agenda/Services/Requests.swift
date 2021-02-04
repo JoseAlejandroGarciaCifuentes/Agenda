@@ -45,6 +45,24 @@ class Requests {
         return AF.request(url, method: .get)
     
     }
+    
+    func updatePassword(password:String/*, api_token:String*/) -> DataRequest {
+        
+        let headers:HTTPHeaders = ["api_token":""]
+        
+        let parameters = ["password": password, "new_password": "12345"]
+        
+        return AF.request(Endpoints.shared.localMac + Endpoints.shared.baseUrl + Endpoints.shared.updatePassword, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers)
+    
+    }
+    
+    func getProfileInfo(api_token:String) -> DataRequest {
+
+        let headers:HTTPHeaders = ["api_token":api_token]
+        
+        return AF.request(Endpoints.shared.localMac + Endpoints.shared.baseUrl + Endpoints.shared.getProfileInfo, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers)
+
+    }
 }
 
 

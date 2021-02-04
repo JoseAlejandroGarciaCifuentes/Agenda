@@ -25,6 +25,29 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let api_token:String = UserDefaults.standard.string(forKey: "api_token"){
+            let request = Requests.shared.getProfileInfo(api_token: api_token)
+            
+            request.response { (responseData) in
+            
+            guard let data = responseData.data else {return}
+            
+                do{
+                    self.user = try JSONDecoder().decode(User.self, from: data)
+                    self.nameLabel.text = self.user!.name
+                    self.surnameLabel.text = self.user!.surname
+                    self.emailLabel.text = self.user!.email
+                    self.usernameLabel.text = self.user!.username
+                }catch{
+                    print("Error decoding == \(error)")
+                }
+            
+            }
+        }
+        
+        
+        
+        
     }
     
     @IBAction func updatePassBT(_ sender: UIButton) {
