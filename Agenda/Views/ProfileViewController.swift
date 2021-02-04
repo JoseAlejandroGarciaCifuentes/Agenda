@@ -20,8 +20,9 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
-    
     var user: User?
+    
+    let identifiers = Identifiers.shared
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -32,7 +33,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let api_token:String = UserDefaults.standard.string(forKey: "api_token"){
+        if let api_token:String = UserDefaults.standard.string(forKey: identifiers.apiToken){
             let request = Requests.shared.getProfileInfo(api_token: api_token)
             
             request.response { (responseData) in
@@ -40,11 +41,13 @@ class ProfileViewController: UIViewController {
             guard let data = responseData.data else {return}
             
                 do{
+                    
                     self.user = try JSONDecoder().decode(User.self, from: data)
                     self.nameLabel.text = self.user!.name
                     self.surnameLabel.text = self.user!.surname
                     self.emailLabel.text = self.user!.email
                     self.usernameLabel.text = self.user!.username
+                    
                 }catch{
                     print("Error decoding == \(error)")
                 }
@@ -52,32 +55,28 @@ class ProfileViewController: UIViewController {
             }
         }
         
-        
-        
-        
     }
     
     @IBAction func updatePassBT(_ sender: UIButton) {
         
-        if(!passwordField.text!.isEmpty){
+        if checkPassword(textFieldPass: passwordField){
             
-            if let api_token:String = UserDefaults.standard.string(forKey: "api_token")
+            if let api_token:String = UserDefaults.standard.string(forKey: identifiers.apiToken)
             {
                 let request = Requests.shared.updatePassword(password: passwordField.text!, api_token: api_token)
                 
                 request.responseJSON { (response) in
-                    print(response.value!)
+                    debugPrint(response)
                 }
                 
             }
             
         }
-        
-        
-        
     }
+    
+    
     @IBAction func deleteBT(_ sender: UIButton) {
-        if let api_token:String = UserDefaults.standard.string(forKey: "api_token")
+        if let api_token:String = UserDefaults.standard.string(forKey: identifiers.apiToken)
         {
             let request = Requests.shared.deleteUser(api_token: api_token)
             request.responseJSON { (response) in

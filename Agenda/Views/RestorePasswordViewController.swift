@@ -20,13 +20,12 @@ class RestorePasswordViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
          self.navigationController?.setNavigationBarHidden(false, animated: true)
-
     }
     
     
     @IBAction func ConfirmRestoring(_ sender: UIButton) {
         let parameters = [
-            "email":textFieldEmail.text!
+            ApiBodyNames.shared.email:textFieldEmail.text!
         ]
         
         Requests.shared.restorePassword(parameters: parameters)

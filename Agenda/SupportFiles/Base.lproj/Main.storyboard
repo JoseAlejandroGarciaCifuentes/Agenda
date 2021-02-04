@@ -475,7 +475,7 @@
         <!--Contacts-->
         <scene sceneID="zbE-h8-aix">
             <objects>
-                <viewController id="r5m-DE-vRz" customClass="TableViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r5m-DE-vRz" customClass="MainScreenViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dyJ-9B-b87">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

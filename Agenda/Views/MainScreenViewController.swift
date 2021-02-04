@@ -1,9 +1,10 @@
 import UIKit
 
-class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var users:[User] = []
+    let identifiers = Identifiers.shared
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -38,7 +39,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // Devuelve la celda de la posición correspondiente
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as! UserRow
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifiers.cellID) as! UserRow
         cell.nameLabel.text = users[indexPath.row].name
         cell.surnameLabel.text = users[indexPath.row].surname
         let request = Requests.shared.getImage(url: users[indexPath.row].profilePic)
@@ -60,7 +61,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     // Este método se ejecuta cuando se pulsa una celda
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = users[indexPath.row]
-        performSegue(withIdentifier: "toDetail", sender: selectedItem)
+        performSegue(withIdentifier: identifiers.toDetail, sender: selectedItem)
     }
     
     // Enviar la información del elemento a la pantalla de detalle

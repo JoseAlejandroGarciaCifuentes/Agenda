@@ -8,7 +8,6 @@ class User : Encodable, Decodable{
     private let _email:String
     private var _name:String
     private var _surname:String
-    //var _dateOfBirth:String
     private var _profilePic:String?
     private var _password:String?
     

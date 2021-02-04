@@ -10,6 +10,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailErrorLabel: UILabel!
     
+    let identifiers = Identifiers.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +29,8 @@ class SignUpViewController: UIViewController {
     
     @IBAction func SignUpButton(_ sender: UIButton) {
         
-        if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel)
-        {
-            if(!textFieldPassword.text!.isEmpty){
-                if(textFieldPassword.text! == textFieldConfirmedPass.text!){
-                    self.performSegue(withIdentifier: "signup", sender: sender)
-                }
-            }
+        if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel) && checkPassword(textFieldPass: textFieldPassword) && checkPassword(textFieldPass: textFieldConfirmedPass){
+            self.performSegue(withIdentifier: identifiers.signUp , sender: sender)
         }
     }
     
@@ -45,7 +41,7 @@ class SignUpViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if(segue.identifier == "signup"){
+        if(segue.identifier == identifiers.signUp){
             let controller = segue.destination as! SignUpDetailsViewController
             controller.email = textFieldEmail.text!
             controller.password = textFieldPassword.text!

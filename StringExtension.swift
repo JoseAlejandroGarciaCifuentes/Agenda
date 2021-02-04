@@ -16,10 +16,16 @@ extension String
     {
         switch validationType
         {
-            case .name:
+            case .username:
                 try validateUsername()
             case .email:
                 try validateEmail()
+            case .password:
+                try validatePassword()
+            case .name:
+                try validateName()
+            case .surname:
+                try validateSurname()
         }
     }
 
@@ -41,5 +47,29 @@ extension String
         }
 
         // add more validations if you want like empty email
+    }
+    
+    private func validatePassword() throws
+    {
+        if isEmpty
+        {
+            throw ValidationError.invalidPassword
+        }
+    }
+    
+    private func validateName() throws
+    {
+        if isEmpty
+        {
+            throw ValidationError.invalidPassword
+        }
+    }
+    
+    private func validateSurname() throws
+    {
+        if isEmpty
+        {
+            throw ValidationError.invalidPassword
+        }
     }
 }

@@ -7,6 +7,7 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordTF: UITextField!
     
+    let identifiers = Identifiers.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,24 +23,23 @@ class LogInViewController: UIViewController {
     
     @IBAction func LogInButton(_ sender: UIButton) {
         
-        if(!usernameTF.text!.isEmpty && !passwordTF.text!.isEmpty){
-            
+        if checkUsername(textFieldUsername:usernameTF) && checkPassword(textFieldPass: passwordTF){
+            let apiBodyNames = ApiBodyNames.shared
             let parameters =
-                ["username":usernameTF.text!,
-                 "password":passwordTF.text!]
+                [apiBodyNames.username:usernameTF.text!,
+                 apiBodyNames.password:passwordTF.text!]
             
             let request = Requests.shared.login(parameters: parameters)
             
             request.responseJSON { response in
                 
-                if(response.value! as! String != "500"){
-                    let body = response.value! as! String
-                    let bodies = body.split(separator: " ")
+                if(response.value! as! String != "No User"){
+                    let httpBody = response.value! as! String
+                    let bodySplitted = httpBody.split(separator: " ")
                 
-                    if(response.response!.statusCode == 200 && bodies[0] == "OK"){
-                        self.performSegue(withIdentifier: "cellID", sender: sender)
-                        UserDefaults.standard.set(bodies[1], forKey: "api_token" )
-                        print(UserDefaults.standard.string(forKey: "api_token")!)
+                    if(response.response!.statusCode == 200 && bodySplitted[0] == "OK"){
+                        self.performSegue(withIdentifier: self.identifiers.cellID, sender: sender)
+                        UserDefaults.standard.set(bodySplitted[1], forKey: self.identifiers.apiToken)
                     }
                 }
             }
@@ -50,32 +50,8 @@ class LogInViewController: UIViewController {
 
     }
     
-    
-    @IBAction func goToSignUpBT(_ sender: UIButton) {
-        
-    }
-    
 }
-/** GET USERS
- let request = Requests.shared.getUsers()
- 
- request.response { (responseData) in
- guard let data = responseData.data else {return}
- 
- do{
-     let users = try JSONDecoder().decode([User].self, from: data)
-     
-     for user in users{
-         print(user.email)
-     }
-     
-     
- }catch{
-     print("Error decoding == \(error)")
- }
- 
- }
- */
+
      
         
 
