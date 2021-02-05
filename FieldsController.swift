@@ -36,6 +36,7 @@ public func checkPassword(textFieldPass:UITextField, errorLabel:UILabel) -> Bool
     {
         let validationError = error as! ValidationError
         errorLabel.isHidden = false
+        errorLabel.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         errorLabel.text = validationError.localizedDescription
         return false
     }
