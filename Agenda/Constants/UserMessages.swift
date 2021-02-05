@@ -16,5 +16,6 @@ class UserMessages {
  
     let noMatchingPasswords = "Passwords do not match"
     let unknownUser = "This user does not exist"
+    let passwordChanged = "Password succesfully changed"
     
 }

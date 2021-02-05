@@ -33,8 +33,9 @@ class ProfileViewController: UIViewController {
     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-         self.navigationController?.setNavigationBarHidden(true, animated: true)
-
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        newPassErrorLabel.isHidden = true
+        passwordField.text = ""
     }
     
     /**
@@ -95,6 +96,9 @@ class ProfileViewController: UIViewController {
                 
                 request.responseJSON { (response) in
                     debugPrint(response)
+                    self.newPassErrorLabel.text = UserMessages.shared.passwordChanged
+                    self.newPassErrorLabel.isHidden = false
+                    self.newPassErrorLabel.textColor = #colorLiteral(red: 0.262745098, green: 0.8509803922, blue: 0.7411764706, alpha: 1)
                 }
                 
             }
