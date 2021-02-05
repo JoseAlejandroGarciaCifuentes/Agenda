@@ -2,6 +2,9 @@ import UIKit
 
 extension UITextField
 {
+    /**
+     Comprueba validación dependiendo del tipo, en caso de no ser correcto hace animación y lanza error de validación
+     */
     func validatedText(_ validationType: ValidatorType) throws
     {
         do
@@ -16,7 +19,9 @@ extension UITextField
     }
 
     // MARK:- Private Methods
-
+    /**
+     Animación de agitar
+     */
     private func shake()
     {
         let animation = CABasicAnimation(keyPath: "position")

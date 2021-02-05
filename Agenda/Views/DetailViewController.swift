@@ -10,21 +10,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var profilePicIV: UIImageView!
+    
     var user: User?
     
+    /**
+    Al mostrarse la pantalla el nav controller aparece
+    */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
          self.navigationController?.setNavigationBarHidden(false, animated: true)
 
     }
-    
+    /**
+     Al entrar a la pantalla por primera vez recoge el usuario enviado de la pantalla anterior
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
         usernameLabel.text = user?.username
         fullNameLabel.text = user!.name + " " + user!.surname
         emailLabel.text = user?.email
-        let request = Requests.shared.getImage(url: user!.profilePic)
+        let request = Requests.shared.downloadImage(url: user!.profilePic)
         
         request.response{ response in
 

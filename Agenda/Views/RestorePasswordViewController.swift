@@ -14,15 +14,21 @@ class RestorePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Esconde teclado al hacer tap en la pantalla
         self.hideKeyboardWhenTappedAround()
     }
     
+    /**
+     Al mostrarse la pantalla el nav controller aparece
+     */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
          self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    
+    /**
+     Botón confirmar realiza peticion que genera una nueva contraseña para el usuario pasado por el textfield
+     */
     @IBAction func ConfirmRestoring(_ sender: UIButton) {
         let parameters = [
             ApiBodyNames.shared.email:textFieldEmail.text!

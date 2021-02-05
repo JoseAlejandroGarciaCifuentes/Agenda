@@ -1,5 +1,6 @@
 import Foundation
 
+//Tipos de validación
 enum ValidatorType
 {
     case email
@@ -7,9 +8,9 @@ enum ValidatorType
     case password
     case username
     case surname
-    // add more cases ...
-}
 
+}
+//tipos de error
 enum ValidationError: Error, LocalizedError
 {
     case invalidUserName
@@ -17,8 +18,8 @@ enum ValidationError: Error, LocalizedError
     case invalidPassword
     case invalidName
     case invalidSurname
-    // add more cases ...
 
+//Errores concretos
     var localizedDescription: String
     {
         switch self

@@ -141,6 +141,7 @@
                         <outlet property="emailLabel" destination="MMh-3t-2ce" id="NnP-5X-bc5"/>
                         <outlet property="nameLabel" destination="TFN-4d-M48" id="jeN-su-GUC"/>
                         <outlet property="passwordField" destination="g0g-r6-cUZ" id="Fs9-by-jVK"/>
+                        <outlet property="profilePicIV" destination="7AB-hr-nG6" id="4SR-gI-ffB"/>
                         <outlet property="surnameLabel" destination="6m6-eC-CXe" id="u99-tf-seF"/>
                         <outlet property="usernameLabel" destination="RTc-4x-bCm" id="6OV-Bl-3JU"/>
                     </connections>

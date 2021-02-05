@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-// Hides keyboard when tapping anywhere
+// Esconde el teclado cuando pulsas en la pantalla
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

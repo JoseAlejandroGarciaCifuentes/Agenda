@@ -22,9 +22,15 @@ class SignUpDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Esconde teclado al hacer tap en la pantalla
         self.hideKeyboardWhenTappedAround()
     }
 
+    /**
+     Al pulsar el boton de confirmar registro comprueba que los fields no esten vacios, muestran mensaje en label y hacen animacion en caso de estarlo.
+     Si todo va bien envia el usuario por param de petición y lo añade a la base de datos
+     Además te lleva de vuelta la pantalla root o login
+     */
     @IBAction func confirmSignUpBT(_ sender: UIButton) {
         
         if checkUsername(textFieldUsername: usernameTF) && checkName(textFieldName: nameTF) && checkSurname(textFieldSurname: surnameTF){

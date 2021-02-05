@@ -6,11 +6,18 @@ class MainScreenViewController: UIViewController, UITableViewDataSource, UITable
     var users:[User] = []
     let identifiers = Identifiers.shared
     
+    /**
+    Al mostrarse la pantalla el nav controller desaparece
+    */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
          self.navigationController?.setNavigationBarHidden(true, animated: true)
 
     }
+    
+    /**
+     Al iniciarse la pantalla se hace una peticion para recoger todos los users además recarga las celdas
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -37,12 +44,14 @@ class MainScreenViewController: UIViewController, UITableViewDataSource, UITable
         return users.count
     }
     
-    // Devuelve la celda de la posición correspondiente
+    /* Devuelve la celda de la posición correspondiente
+     Paso el nombre, apellidos e imagen a la celda que sea pulsada
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifiers.cellID) as! UserRow
         cell.nameLabel.text = users[indexPath.row].name
         cell.surnameLabel.text = users[indexPath.row].surname
-        let request = Requests.shared.getImage(url: users[indexPath.row].profilePic)
+        let request = Requests.shared.downloadImage(url: users[indexPath.row].profilePic)
         
         request.response{ response in
 

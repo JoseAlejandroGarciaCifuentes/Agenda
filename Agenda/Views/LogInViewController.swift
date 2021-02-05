@@ -11,16 +11,25 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Esconde teclado al hacer tap en la pantalla
         self.hideKeyboardWhenTappedAround()
         
     }
     
+    /**
+    Al mostrarse la pantalla el nav controller desaparece
+    */
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
          self.navigationController?.setNavigationBarHidden(true, animated: true)
 
     }
     
+    /**
+     Boton de login comprueba username y pass que no esten vacias
+     En caso de no estarlo hace la petición pasando estos mismo params y hace segue hacia pantalla main
+     Además se guarda el token en local
+     */
     @IBAction func LogInButton(_ sender: UIButton) {
         
         if checkUsername(textFieldUsername:usernameTF) && checkPassword(textFieldPass: passwordTF){
@@ -44,10 +53,7 @@ class LogInViewController: UIViewController {
                 }
             }
             
-        }else{
-            
         }
-
     }
     
 }
