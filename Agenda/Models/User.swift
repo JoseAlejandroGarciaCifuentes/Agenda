@@ -39,6 +39,7 @@ class User : Encodable, Decodable{
             self._name = newValue
         }
     }
+    
     public var password: String {
         get {
             return self._password ?? "";

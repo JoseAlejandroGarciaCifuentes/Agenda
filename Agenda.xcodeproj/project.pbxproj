@@ -25,7 +25,6 @@
 		53C3B15525C0E64E007CBA91 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3B15425C0E64E007CBA91 /* Endpoints.swift */; };
 		53DF5D2C25C882FB00AA68D1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF5D2B25C882FA00AA68D1 /* MainScreenViewController.swift */; };
 		53DF5D2E25C89D6700AA68D1 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF5D2D25C89D6700AA68D1 /* UserRow.swift */; };
-		7F1AB13425C197C300DBC19E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AB13325C197C300DBC19E /* Colors.swift */; };
 		7F1AB13625C1A5AD00DBC19E /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1AB13525C1A5AD00DBC19E /* RestorePasswordViewController.swift */; };
 		7F2B3D1725C18989004D441C /* FieldValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1625C18989004D441C /* FieldValidations.swift */; };
 		7F2B3D1925C18A15004D441C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1825C18A15004D441C /* StringExtension.swift */; };
@@ -63,7 +62,6 @@
 		53C3B15425C0E64E007CBA91 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		53DF5D2B25C882FA00AA68D1 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		53DF5D2D25C89D6700AA68D1 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
-		7F1AB13325C197C300DBC19E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7F1AB13525C1A5AD00DBC19E /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
 		7F2B3D1625C18989004D441C /* FieldValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidations.swift; sourceTree = SOURCE_ROOT; };
 		7F2B3D1825C18A15004D441C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = SOURCE_ROOT; };
@@ -164,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				53C3B15425C0E64E007CBA91 /* Endpoints.swift */,
-				7F1AB13325C197C300DBC19E /* Colors.swift */,
 				5360F7CA25CB395300AB7EC3 /* Images.swift */,
 				5360F7D025CC8FA700AB7EC3 /* ApiBodyNames.swift */,
 				5360F7D225CC914B00AB7EC3 /* Identifiers.swift */,
@@ -341,7 +338,6 @@
 				7FAAA81125CD62FF003DE8F1 /* ApiBodyResponses.swift in Sources */,
 				7FAAA81525CD69BE003DE8F1 /* StatusCodes.swift in Sources */,
 				53DF5D2E25C89D6700AA68D1 /* UserRow.swift in Sources */,
-				7F1AB13425C197C300DBC19E /* Colors.swift in Sources */,
 				53C3B13825BF3FE4007CBA91 /* SignUpViewController.swift in Sources */,
 				53858A5025CA0DCC002E323B /* ProfileViewController.swift in Sources */,
 				53C3B14825BF5A94007CBA91 /* LogInViewController.swift in Sources */,

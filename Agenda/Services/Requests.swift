@@ -5,6 +5,7 @@ class Requests {
     
     static let shared = Requests()
     let apiBodyNames:ApiBodyNames
+    
     private init() {
         apiBodyNames = ApiBodyNames.shared
     }
