@@ -22,18 +22,20 @@ enum ValidationError: Error, LocalizedError
 //Errores concretos
     var localizedDescription: String
     {
+        let userMessages = UserMessages.shared
+        
         switch self
         {
             case .invalidEmail:
-                return "Please enter a valid email"
+                return userMessages.invalidEmail
             case .invalidUserName:
-                return "Please enter a valid username"
+                return userMessages.invalidUsername
             case .invalidPassword:
-                return "Please enter a valid password"
+                return userMessages.invalidPass
             case .invalidName:
-                return "Please enter a valid name"
+                return userMessages.invalidName
             case .invalidSurname:
-                return "Please enter a valid surname"
+                return userMessages.invalidSurname
             
         }
     }
