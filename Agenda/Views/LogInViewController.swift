@@ -7,7 +7,10 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var ErrorUserLabel: UILabel!
+    @IBOutlet weak var ErrorPassLabel: UILabel!
     let identifiers = Identifiers.shared
+    let apiBodyResponses = ApiBodyResponses.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,16 @@ class LogInViewController: UIViewController {
 
     }
     
+    
+    @IBAction func onFinishTypingUsername(_ sender: UITextField) {
+        ErrorUserLabel.isHidden = true
+    }
+    
+    
+    @IBAction func onFinishTypingPass(_ sender: UITextField) {
+        ErrorPassLabel.isHidden = true
+    }
+    
     /**
      Boton de login comprueba username y pass que no esten vacias
      En caso de no estarlo hace la petición pasando estos mismo params y hace segue hacia pantalla main
@@ -32,7 +45,7 @@ class LogInViewController: UIViewController {
      */
     @IBAction func LogInButton(_ sender: UIButton) {
         
-        if checkUsername(textFieldUsername:usernameTF) && checkPassword(textFieldPass: passwordTF){
+        if checkUsername(textFieldUsername:usernameTF, errorLabel: ErrorUserLabel) && checkPassword(textFieldPass: passwordTF, errorLabel: ErrorPassLabel){
             let apiBodyNames = ApiBodyNames.shared
             let parameters =
                 [apiBodyNames.username:usernameTF.text!,
@@ -42,13 +55,18 @@ class LogInViewController: UIViewController {
             
             request.responseJSON { response in
                 
-                if(response.value! as! String != "No User"){
-                    let httpBody = response.value! as! String
-                    let bodySplitted = httpBody.split(separator: " ")
-                
-                    if(response.response!.statusCode == 200 && bodySplitted[0] == "OK"){
-                        self.performSegue(withIdentifier: self.identifiers.cellID, sender: sender)
-                        UserDefaults.standard.set(bodySplitted[1], forKey: self.identifiers.apiToken)
+                if let body:String = response.value as? String {
+                    if(body != self.apiBodyResponses.noUser){
+                        let httpBody = response.value! as! String
+                        let bodySplitted = httpBody.split(separator: " ")
+                    
+                        if(response.response!.statusCode == StatusCodes.shared.OK && bodySplitted[0] == self.apiBodyResponses.loginCorrect){
+                            self.performSegue(withIdentifier: self.identifiers.cellID, sender: sender)
+                            UserDefaults.standard.set(bodySplitted[1], forKey: self.identifiers.apiToken)
+                        }
+                    }else{
+                        self.ErrorUserLabel.isHidden = false
+                        self.ErrorUserLabel.text = UserMessages.shared.unknownUser
                     }
                 }
             }

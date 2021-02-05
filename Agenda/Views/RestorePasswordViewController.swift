@@ -11,6 +11,7 @@ import UIKit
 class RestorePasswordViewController: UIViewController {
 
     @IBOutlet weak var textFieldEmail: UITextField!
+    @IBOutlet weak var restorePassErrorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,15 @@ class RestorePasswordViewController: UIViewController {
      Botón confirmar realiza peticion que genera una nueva contraseña para el usuario pasado por el textfield
      */
     @IBAction func ConfirmRestoring(_ sender: UIButton) {
-        let parameters = [
-            ApiBodyNames.shared.email:textFieldEmail.text!
-        ]
         
-        Requests.shared.restorePassword(parameters: parameters)
+        if checkEmail(textFieldEmail: textFieldEmail, errorLabel: restorePassErrorLabel) {
+         
+            let parameters = [
+                ApiBodyNames.shared.email:textFieldEmail.text!
+            ]
+            
+            Requests.shared.restorePassword(parameters: parameters)
+        }
     }
     
         

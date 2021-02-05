@@ -16,6 +16,9 @@ class SignUpDetailsViewController: UIViewController {
     
     @IBOutlet weak var surnameTF: UITextField!
     
+    @IBOutlet weak var usernameErrorLabel: UILabel!
+    @IBOutlet weak var nameErrorLabel: UILabel!
+    @IBOutlet weak var surnameErrorLabel: UILabel!
     var email:String?
     
     var password:String?
@@ -25,6 +28,8 @@ class SignUpDetailsViewController: UIViewController {
         //Esconde teclado al hacer tap en la pantalla
         self.hideKeyboardWhenTappedAround()
     }
+    
+    
 
     /**
      Al pulsar el boton de confirmar registro comprueba que los fields no esten vacios, muestran mensaje en label y hacen animacion en caso de estarlo.
@@ -33,15 +38,17 @@ class SignUpDetailsViewController: UIViewController {
      */
     @IBAction func confirmSignUpBT(_ sender: UIButton) {
         
-        if checkUsername(textFieldUsername: usernameTF) && checkName(textFieldName: nameTF) && checkSurname(textFieldSurname: surnameTF){
+        if checkUsername(textFieldUsername: usernameTF, errorLabel: usernameErrorLabel) && checkName(textFieldName: nameTF, errorLabel: nameErrorLabel) && checkSurname(textFieldSurname: surnameTF, errorLabel: usernameErrorLabel){
             let images = Images.shared
             let user = User(username: usernameTF.text!, email: email!, name: nameTF.text!, surname: surnameTF.text!, profilePic: images.pictures[Random.shared.getRandom(max: images.pictures.count)], password: password!)
         
             let request = Requests.shared.registerUser(user: user)
             
             request.responseJSON { (response) in
-                if(response.value! as! String == "Usuario registrado"){
-                    self.navigationController?.popToRootViewController(animated: true)
+                if let body:String = response.value as? String{
+                    if(body == ApiBodyResponses.shared.registered){
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
                 }
             }
         }

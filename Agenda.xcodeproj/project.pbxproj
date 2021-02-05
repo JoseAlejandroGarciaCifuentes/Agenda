@@ -33,6 +33,10 @@
 		7F2B3D1D25C18AEA004D441C /* FieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B3D1C25C18AEA004D441C /* FieldsController.swift */; };
 		7F4DD5C325CAC3CF00048FC1 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4DD5C225CAC3CF00048FC1 /* ViewControllerExtension.swift */; };
 		7F81F8DB25C42735002D07B8 /* SignUpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F81F8DA25C42735002D07B8 /* SignUpDetailsViewController.swift */; };
+		7FAAA81125CD62FF003DE8F1 /* ApiBodyResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAA81025CD62FF003DE8F1 /* ApiBodyResponses.swift */; };
+		7FAAA81325CD655D003DE8F1 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAA81225CD655D003DE8F1 /* Urls.swift */; };
+		7FAAA81525CD69BE003DE8F1 /* StatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAA81425CD69BE003DE8F1 /* StatusCodes.swift */; };
+		7FAAA81B25CD7801003DE8F1 /* UserMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAA81A25CD7801003DE8F1 /* UserMessages.swift */; };
 		9EABEA0AA25446F26BF7076D /* Pods_Agenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +71,10 @@
 		7F2B3D1C25C18AEA004D441C /* FieldsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsController.swift; sourceTree = SOURCE_ROOT; };
 		7F4DD5C225CAC3CF00048FC1 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerExtension.swift; path = Agenda/Views/ViewControllerExtension.swift; sourceTree = SOURCE_ROOT; };
 		7F81F8DA25C42735002D07B8 /* SignUpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailsViewController.swift; sourceTree = "<group>"; };
+		7FAAA81025CD62FF003DE8F1 /* ApiBodyResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBodyResponses.swift; sourceTree = "<group>"; };
+		7FAAA81225CD655D003DE8F1 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		7FAAA81425CD69BE003DE8F1 /* StatusCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodes.swift; sourceTree = "<group>"; };
+		7FAAA81A25CD7801003DE8F1 /* UserMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessages.swift; sourceTree = "<group>"; };
 		B3846FCD3A8D441AB1BF2FE4 /* Pods_Agenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,6 +168,10 @@
 				5360F7CA25CB395300AB7EC3 /* Images.swift */,
 				5360F7D025CC8FA700AB7EC3 /* ApiBodyNames.swift */,
 				5360F7D225CC914B00AB7EC3 /* Identifiers.swift */,
+				7FAAA81025CD62FF003DE8F1 /* ApiBodyResponses.swift */,
+				7FAAA81225CD655D003DE8F1 /* Urls.swift */,
+				7FAAA81425CD69BE003DE8F1 /* StatusCodes.swift */,
+				7FAAA81A25CD7801003DE8F1 /* UserMessages.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -324,12 +336,16 @@
 			files = (
 				7F2B3D1D25C18AEA004D441C /* FieldsController.swift in Sources */,
 				53DF5D2C25C882FB00AA68D1 /* MainScreenViewController.swift in Sources */,
+				7FAAA81B25CD7801003DE8F1 /* UserMessages.swift in Sources */,
 				7F1AB13625C1A5AD00DBC19E /* RestorePasswordViewController.swift in Sources */,
+				7FAAA81125CD62FF003DE8F1 /* ApiBodyResponses.swift in Sources */,
+				7FAAA81525CD69BE003DE8F1 /* StatusCodes.swift in Sources */,
 				53DF5D2E25C89D6700AA68D1 /* UserRow.swift in Sources */,
 				7F1AB13425C197C300DBC19E /* Colors.swift in Sources */,
 				53C3B13825BF3FE4007CBA91 /* SignUpViewController.swift in Sources */,
 				53858A5025CA0DCC002E323B /* ProfileViewController.swift in Sources */,
 				53C3B14825BF5A94007CBA91 /* LogInViewController.swift in Sources */,
+				7FAAA81325CD655D003DE8F1 /* Urls.swift in Sources */,
 				53858A4E25C94AFE002E323B /* DetailViewController.swift in Sources */,
 				53C3B15325C0E506007CBA91 /* User.swift in Sources */,
 				7F2B3D1725C18989004D441C /* FieldValidations.swift in Sources */,

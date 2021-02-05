@@ -26,7 +26,7 @@ public func checkEmail(textFieldEmail:UITextField, errorLabel:UILabel) -> Bool
 Comprueba que el password textfield no este vacio, devielve true o false
  En caso de false hace animación en textfield
 */
-public func checkPassword(textFieldPass:UITextField) -> Bool
+public func checkPassword(textFieldPass:UITextField, errorLabel:UILabel) -> Bool
 {
     do
     {
@@ -35,8 +35,8 @@ public func checkPassword(textFieldPass:UITextField) -> Bool
     catch let error
     {
         let validationError = error as! ValidationError
-        //errorLabel.isHidden = false
-        //errorLabel.text = validationError.localizedDescription
+        errorLabel.isHidden = false
+        errorLabel.text = validationError.localizedDescription
         return false
     }
 
@@ -47,7 +47,7 @@ public func checkPassword(textFieldPass:UITextField) -> Bool
 Comprueba que el username textfield no este vacio, devielve true o false
  En caso de false hace animación en textfield
 */
-public func checkUsername(textFieldUsername:UITextField) -> Bool
+public func checkUsername(textFieldUsername:UITextField, errorLabel:UILabel) -> Bool
 {
     do
     {
@@ -56,8 +56,8 @@ public func checkUsername(textFieldUsername:UITextField) -> Bool
     catch let error
     {
         let validationError = error as! ValidationError
-        //errorLabel.isHidden = false
-        //errorLabel.text = validationError.localizedDescription
+        errorLabel.isHidden = false
+        errorLabel.text = validationError.localizedDescription
         return false
     }
 
@@ -68,7 +68,7 @@ public func checkUsername(textFieldUsername:UITextField) -> Bool
 Comprueba que el name  textfield no este vacio, devielve true o false
  En caso de false hace animación en textfield
 */
-public func checkName(textFieldName:UITextField) -> Bool
+public func checkName(textFieldName:UITextField, errorLabel:UILabel) -> Bool
 {
     do
     {
@@ -77,8 +77,8 @@ public func checkName(textFieldName:UITextField) -> Bool
     catch let error
     {
         let validationError = error as! ValidationError
-        //errorLabel.isHidden = false
-        //errorLabel.text = validationError.localizedDescription
+        errorLabel.isHidden = false
+        errorLabel.text = validationError.localizedDescription
         return false
     }
 
@@ -89,7 +89,7 @@ public func checkName(textFieldName:UITextField) -> Bool
 Comprueba que el surname textfield no este vacio, devielve true o false
  En caso de false hace animación en textfield
 */
-public func checkSurname(textFieldSurname:UITextField) -> Bool
+public func checkSurname(textFieldSurname:UITextField, errorLabel:UILabel) -> Bool
 {
     do
     {
@@ -98,8 +98,8 @@ public func checkSurname(textFieldSurname:UITextField) -> Bool
     catch let error
     {
         let validationError = error as! ValidationError
-        //errorLabel.isHidden = false
-        //errorLabel.text = validationError.localizedDescription
+        errorLabel.isHidden = false
+        errorLabel.text = validationError.localizedDescription
         return false
     }
 

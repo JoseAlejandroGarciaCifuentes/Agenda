@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profilePicIV: UIImageView!
     
+    @IBOutlet weak var newPassErrorLabel: UILabel!
     var user: User?
     
     let identifiers = Identifiers.shared
@@ -86,7 +87,7 @@ class ProfileViewController: UIViewController {
      */
     @IBAction func updatePassBT(_ sender: UIButton) {
         
-        if checkPassword(textFieldPass: passwordField){
+        if checkPassword(textFieldPass: passwordField, errorLabel: newPassErrorLabel){
             
             if let api_token:String = UserDefaults.standard.string(forKey: identifiers.apiToken)
             {
@@ -111,8 +112,10 @@ class ProfileViewController: UIViewController {
             let request = requests.deleteUser(api_token: api_token)
             request.responseJSON { (response) in
                 
-                if(response.value! as! String == "Deleted"){
-                    self.navigationController?.popToRootViewController(animated: true)
+                if let body:String = response.value as? String{
+                    if(body == ApiBodyResponses.shared.userDeleted){
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
                 }
             }
         }else{

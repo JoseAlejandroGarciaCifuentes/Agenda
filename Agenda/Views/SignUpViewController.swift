@@ -10,6 +10,8 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailErrorLabel: UILabel!
     
+    @IBOutlet weak var passErrorLabel: UILabel!
+    @IBOutlet weak var confirmedPassErrorLabel: UILabel!
     let identifiers = Identifiers.shared
     
     override func viewDidLoad() {
@@ -33,14 +35,29 @@ class SignUpViewController: UIViewController {
     @IBAction func OnFinishTypingEmail(_ sender: UITextField) {
         emailErrorLabel.isHidden = true
     }
+    
+    
+    @IBAction func onFinishTypingPass(_ sender: UITextField) {
+        passErrorLabel.isHidden = true
+    }
+    
+    @IBAction func onFinishTypingConfirmedPass(_ sender: UITextField) {
+        confirmedPassErrorLabel.isHidden = true
+    }
+    
     /**
     Al pulsar el boton de sign up se comprueba que el email y la pass no esten vacias y que el email no sea erróneo
      Si todo bien se hace el segue hacia la siguiente pantalla
      */
     @IBAction func SignUpButton(_ sender: UIButton) {
         
-        if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel) && checkPassword(textFieldPass: textFieldPassword) && checkPassword(textFieldPass: textFieldConfirmedPass){
+        if checkEmail(textFieldEmail: textFieldEmail, errorLabel: emailErrorLabel) && checkPassword(textFieldPass: textFieldPassword, errorLabel: passErrorLabel) && checkPassword(textFieldPass: textFieldConfirmedPass, errorLabel: confirmedPassErrorLabel){
+            if(textFieldPassword.text == textFieldConfirmedPass.text){
                 self.performSegue(withIdentifier: identifiers.signUp , sender: sender)
+            }else{
+                confirmedPassErrorLabel.isHidden = false
+                confirmedPassErrorLabel.text = UserMessages.shared.noMatchingPasswords
+            }
         }
     }
     
